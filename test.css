@@ -1,0 +1,48 @@
+body{
+    background-color: purple;
+}
+
+div {
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+}
+
+table {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: .125vw solid black;
+}
+
+th {
+    border: .125px solid black;
+}
+
+tr.header_row {
+    font-size: calc(0.5em + 1vmin);
+    background-color: #D3D3D3;
+    border-bottom: .275vw double black;
+}
+
+tr.row_highlight {
+    background-color: #ededed;
+}
+
+td{
+    font-size: calc(0.5em + 1vmin);
+    align-items: center;
+}
+
+tr:hover {
+    background-color: #FFECCF;
+}
+
+img {
+    width: calc(3em + 1vmin);
+    height: auto;
+    vertical-align: center;
+}
