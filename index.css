@@ -29,7 +29,12 @@ tr.header_row {
 }
 
 tr.row_highlight {
+    height: 5em;
     background-color: #ededed;
+}
+
+.pokemon_row {
+    height: 5em;
 }
 
 td{
@@ -45,4 +50,66 @@ img {
     width: calc(3em + 1vmin);
     height: auto;
     vertical-align: center;
+}
+
+table button.type_grass{
+  background-color:#7BCE52;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  padding-right: calc(.5em + 1vmin);
+  padding-left: calc(.5em + 1vmin);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: .25em;
+}
+
+table button.type_poison{
+  background-color:#A15495;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  padding-right: calc(.5em + 1vmin);
+  padding-left: calc(.5em + 1vmin);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: .25em;
+}
+
+table button.type_fire{
+  background-color: #F75231;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  padding-right: calc(.5em + 1vmin);
+  padding-left: calc(.5em + 1vmin);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: .25em;
+  margin-bottom: .25em;
+}
+
+table button.type_flying{
+  background-color: #9CADF7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 1em;
+  padding-right: calc(.5em + 1vmin);
+  padding-left: calc(.5em + 1vmin);
+  padding-top: .5em;
+  padding-bottom: .5em;
+  margin-top: .25em;
+}
+
+table button {
+    min-width: 6em;
+    max-width: 6em;
+    border: none;
+    background: transparent;
+    font-family: "Times New Roman";
+    font-size: calc(0.5em + 1vmin);
 }
