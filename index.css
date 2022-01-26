@@ -24,7 +24,7 @@ table {
 }
 
 th {
-    border: .125px solid black;
+    border: 5px solid black;
 }
 
 th:hover {
