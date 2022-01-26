@@ -3,22 +3,22 @@
    <head>
       <meta charset="UTF-8">
       <title>Example Page</title>
-      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="test.css">
    </head>
    <body>
       <div>
          <table id="pokemon">
             <tr class="header_row">
-               <th onclick="sortTable(0)">Dex # &nbsp; ▼</th>
-               <th>Sprite &nbsp; ▼</th>
-               <th onclick="sortTable(2)">Name &nbsp; ▼</th>
-               <th>Type 1 &nbsp; ▼</th>
-               <th>Type 2 &nbsp; ▼</th>
+               <th onclick="sortTable(0)" class="sortable">Dex # &nbsp; ▼</th>
+               <th>Sprite</th>
+               <th onclick="sortTable(2)" class="sortable">Name &nbsp; ▼</th>
+               <th>Type 1</th>
+               <th>Type 2</th>
             </tr>
-            <tr class="pokemon_row">
+            <tr>
                <td>1</td>
                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png" alt="Bulbasaur"></td>
-               <td class="Poke_Name">Bulbasaur</td>
+               <td class="Poke_Name"><a href="#">Bulbasaur</a></td>
                <td>
                   <button class="type_grass">Grass</button>
                </td>
@@ -26,7 +26,7 @@
                   <button class="type_poison">Poison</button>
                </td>
             </tr>
-            <tr class="row_highlight pokmeon_row">
+            <tr>
                <td>2</td>
                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/2.png" alt="Ivysaur"></td>
                <td class="Poke_Name">Ivysaur</td>
@@ -37,7 +37,7 @@
                   <button class="type_poison">Poison</button>
                </td>
             </tr>
-            <tr  class="pokemon_row">
+            <tr>
                <td>3</td>
                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/3.png" alt="Venusaur"></td>
                <td class="Poke_Name">Venusaur</td>
@@ -48,7 +48,7 @@
                   <button class="type_poison">Poison</button>
                </td>
             </tr>
-            <tr class="row_highlight pokemon_row">
+            <tr>
                <td>4</td>
                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/4.png" alt="Charmander"></td>
                <td class="Poke_Name">Charmander</td>
@@ -59,7 +59,7 @@
                   <button></button>
                </td>
             </tr>
-            <tr  class="pokemon_row">
+            <tr>
                <td>5</td>
                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/5.png" alt="Charmeleon"></td>
                <td class="Poke_Name">Charmeleon</td>
@@ -70,7 +70,7 @@
                   <button></button>
                </td>
             </tr>
-            <tr class="row_highlight pokemon_row">
+            <tr>
                <td>6</td>
                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/6.png" alt="Charizard"></td>
                <td class="Poke_Name">Charizard</td>
@@ -83,62 +83,8 @@
             </tr>
          </table>
       </div>
-      <script>
-         function sortTable(n) {
-           var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-           table = document.getElementById("pokemon");
-           switching = true;
-           // Set the sorting direction to ascending:
-           dir = "asc";
-           /* Make a loop that will continue until
-           no switching has been done: */
-           while (switching) {
-             // Start by saying: no switching is done:
-             switching = false;
-             rows = table.rows;
-             /* Loop through all table rows (except the
-             first, which contains table headers): */
-             for (i = 1; i < (rows.length - 1); i++) {
-               // Start by saying there should be no switching:
-               shouldSwitch = false;
-               /* Get the two elements you want to compare,
-               one from current row and one from the next: */
-               x = rows[i].getElementsByTagName("TD")[n];
-               y = rows[i + 1].getElementsByTagName("TD")[n];
-               /* Check if the two rows should switch place,
-               based on the direction, asc or desc: */
-               if (dir == "asc") {
-                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-                   // If so, mark as a switch and break the loop:
-                   shouldSwitch = true;
-                   break;
-                 }
-               } else if (dir == "desc") {
-                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-                   // If so, mark as a switch and break the loop:
-                   shouldSwitch = true;
-                   break;
-                 }
-               }
-             }
-             if (shouldSwitch) {
-               /* If a switch has been marked, make the switch
-               and mark that a switch has been done: */
-               rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-               switching = true;
-               // Each time a switch is done, increase this count by 1:
-               switchcount++;
-             } else {
-               /* If no switching has been done AND the direction is "asc",
-               set the direction to "desc" and run the while loop again. */
-               if (switchcount == 0 && dir == "asc") {
-                 dir = "desc";
-                 switching = true;
-               }
-             }
-           }
-         }
-             
+      <script src="main.js">
+
       </script>
    </body>
 </html>
