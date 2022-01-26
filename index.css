@@ -27,6 +27,10 @@ th {
     border: .125px solid black;
 }
 
+th:hover {
+  cursor: pointer;
+}
+
 tr.header_row {
     font-size: calc(0.5em + 1vmin);
     background-color: #D3D3D3;
@@ -120,8 +124,4 @@ table button {
     border: none;
     background: transparent;
     font-size: calc(0.5em + 1vmin);
-}
-
-th a {
-  text-decoration: none;
 }
