@@ -1,5 +1,10 @@
+* {
+  font-family: "Times New Roman";
+}
+  
 body{
-    background-color: purple;
+    justify-content: center;
+    align-items: center;
 }
 
 div {
@@ -28,6 +33,10 @@ tr.header_row {
     border-bottom: .275vw double black;
 }
 
+tr.header_row:hover {
+  background-color: #D3D3D3;
+}
+
 tr.row_highlight {
     height: 5em;
     background-color: #ededed;
@@ -47,7 +56,7 @@ tr:hover {
 }
 
 img {
-    width: calc(3em + 1vmin);
+    width: calc(4em + 1vmin);
     height: auto;
     vertical-align: center;
 }
@@ -110,6 +119,5 @@ table button {
     max-width: 6em;
     border: none;
     background: transparent;
-    font-family: "Times New Roman";
     font-size: calc(0.5em + 1vmin);
 }
