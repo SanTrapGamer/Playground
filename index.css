@@ -121,3 +121,7 @@ table button {
     background: transparent;
     font-size: calc(0.5em + 1vmin);
 }
+
+th a {
+  text-decoration: none;
+}
