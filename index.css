@@ -27,7 +27,7 @@ th {
     border: .125px solid black;
 }
 
-th:hover {
+th.sortable:hover {
   cursor: pointer;
 }
 
@@ -41,13 +41,13 @@ tr.header_row:hover {
   background-color: #D3D3D3;
 }
 
-tr.row_highlight {
+tr:nth-child(2n) {
     height: 5em;
-    background-color: #ededed;
 }
 
-.pokemon_row {
+tr:nth-child(2n + 3) {
     height: 5em;
+    background-color: #ededed;
 }
 
 td{
@@ -124,4 +124,18 @@ table button {
     border: none;
     background: transparent;
     font-size: calc(0.5em + 1vmin);
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
+
+a:visited {
+    color: purple;
 }
